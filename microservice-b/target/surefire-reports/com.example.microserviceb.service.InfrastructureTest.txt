@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.microserviceb.service.InfrastructureTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.304 s -- in com.example.microserviceb.service.InfrastructureTest

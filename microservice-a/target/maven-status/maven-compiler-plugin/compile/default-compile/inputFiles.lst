@@ -1,0 +1,6 @@
+D:\karaf\microservice-a\src\main\java\com\example\microservicea\api\JobResource.java
+D:\karaf\microservice-a\src\main\java\com\example\microservicea\kafka\KafkaEventProducer.java
+D:\karaf\microservice-a\src\main\java\com\example\microservicea\redis\JobReadRepository.java
+D:\karaf\microservice-a\src\main\java\com\example\microservicea\service\ClientFactory.java
+D:\karaf\microservice-a\src\main\java\com\example\microservicea\service\JobCommandService.java
+D:\karaf\microservice-a\src\main\java\com\example\microservicea\service\JobQueryService.java

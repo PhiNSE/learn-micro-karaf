@@ -1,0 +1,5 @@
+D:\karaf\microservice-b\src\main\java\com\example\microserviceb\kafka\JobEventConsumer.java
+D:\karaf\microservice-b\src\main\java\com\example\microserviceb\redis\JobWriteRepository.java
+D:\karaf\microservice-b\src\main\java\com\example\microserviceb\redis\PersonRepository.java
+D:\karaf\microservice-b\src\main\java\com\example\microserviceb\service\ClientFactory.java
+D:\karaf\microservice-b\src\main\java\com\example\microserviceb\service\JobEventHandler.java

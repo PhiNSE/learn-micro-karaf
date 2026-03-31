@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+microservice-a,com.example.microservicea.service,ClientFactory,12,29,0,0,3,6,1,2,1,2
+microservice-a,com.example.microservicea.service,JobQueryService,0,11,0,0,0,4,0,2,0,2
+microservice-a,com.example.microservicea.service,JobCommandService,14,27,0,0,2,8,1,3,1,3
+microservice-a,com.example.microservicea.redis,JobReadRepository,0,16,0,0,0,5,0,2,0,2
+microservice-a,com.example.microservicea.api,JobResource,19,27,1,1,5,9,3,3,2,3
+microservice-a,com.example.microservicea.kafka,KafkaEventProducer,2,36,1,1,0,9,1,2,0,2

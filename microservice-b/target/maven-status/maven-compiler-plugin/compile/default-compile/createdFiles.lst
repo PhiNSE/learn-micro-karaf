@@ -1,0 +1,5 @@
+com\example\microserviceb\redis\PersonRepository.class
+com\example\microserviceb\kafka\JobEventConsumer.class
+com\example\microserviceb\redis\JobWriteRepository.class
+com\example\microserviceb\service\ClientFactory.class
+com\example\microserviceb\service\JobEventHandler.class

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+           xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.2.0">
+
+    <cm:property-placeholder persistent-id="com.example.microserviceb">
+        <cm:default-properties>
+            <cm:property name="kafka.bootstrap.servers" value="kafka:9092"/>
+            <cm:property name="kafka.group.id" value="job-worker-group"/>
+            <cm:property name="kafka.topic" value="job-events"/>
+            <cm:property name="redis.address" value="redis://redis:6379"/>
+        </cm:default-properties>
+    </cm:property-placeholder>
+
+    <bean id="jsonUtil" class="com.example.common.event.JsonUtil"/>
+    <bean id="clientFactory" class="com.example.microserviceb.service.ClientFactory"/>
+
+    <bean id="kafkaConsumer"
+          factory-ref="clientFactory"
+          factory-method="createKafkaConsumer">
+        <argument value="${kafka.bootstrap.servers}"/>
+        <argument value="${kafka.group.id}"/>
+    </bean>
+
+    <bean id="redissonClient"
+          factory-ref="clientFactory"
+          factory-method="createRedissonClient">
+        <argument value="${redis.address}"/>
+    </bean>
+
+    <bean id="jobWriteRepository" class="com.example.microserviceb.redis.JobWriteRepository">
+        <argument ref="redissonClient"/>
+    </bean>
+
+    <bean id="jobEventHandler" class="com.example.microserviceb.service.JobEventHandler">
+        <argument ref="jobWriteRepository"/>
+    </bean>
+
+    <bean id="jobEventConsumer" class="com.example.microserviceb.kafka.JobEventConsumer" init-method="start">
+        <argument ref="kafkaConsumer"/>
+        <argument ref="jsonUtil"/>
+        <argument ref="jobEventHandler"/>
+        <argument value="${kafka.topic}"/>
+    </bean>
+</blueprint>

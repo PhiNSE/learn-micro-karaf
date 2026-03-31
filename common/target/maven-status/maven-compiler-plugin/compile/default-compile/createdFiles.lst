@@ -1,0 +1,5 @@
+com\example\common\model\Person.class
+com\example\common\event\JobEvent.class
+com\example\common\model\Job.class
+com\example\common\event\EventType.class
+com\example\common\event\JsonUtil.class

@@ -1,0 +1,7 @@
+FROM apache/karaf:4.4.5
+
+COPY ../features/target/features-1.0.0-SNAPSHOT-features.xml /opt/karaf/deploy/features.xml
+COPY ../common/target/common-1.0.0-SNAPSHOT.jar /opt/karaf/deploy/
+COPY ../microservice-b/target/microservice-b-1.0.0-SNAPSHOT.jar /opt/karaf/deploy/
+
+EXPOSE 8181

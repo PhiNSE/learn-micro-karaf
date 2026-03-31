@@ -1,0 +1,4 @@
+com\example\microservicea\service\KafkaEventProducerTest.class
+com\example\microservicea\service\JobServicesTest.class
+com\example\microservicea\service\InfrastructureTest.class
+com\example\microservicea\service\JobResourceTest.class

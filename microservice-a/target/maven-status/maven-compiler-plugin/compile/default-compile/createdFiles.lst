@@ -1,0 +1,6 @@
+com\example\microservicea\kafka\KafkaEventProducer.class
+com\example\microservicea\redis\JobReadRepository.class
+com\example\microservicea\service\ClientFactory.class
+com\example\microservicea\service\JobQueryService.class
+com\example\microservicea\api\JobResource.class
+com\example\microservicea\service\JobCommandService.class
